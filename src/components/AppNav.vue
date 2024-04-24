@@ -76,6 +76,7 @@ export default defineComponent({
     box-sizing: border-box;
     font-size: 14px;
     line-height: 100%;
+    font-weight: 500;
 
     &-active {
       opacity: 1;
