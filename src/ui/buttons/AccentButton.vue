@@ -13,7 +13,7 @@ export default {
 
 .button {
   &__accent {
-    background: $primary-color;
+    background: $primary-color-2;
     border: none;
     border-radius: 24px;
     padding: 12px 24px;
