@@ -4,7 +4,9 @@
     <AppNav />
     <div class="header__buttons">
       <search-button />
-      <primary-dark-button>кнопка</primary-dark-button>
+      <primary-dark-button>{{
+        $store.state.isAuth ? "Профиль" : "Войти"
+      }}</primary-dark-button>
     </div>
   </header>
 </template>

@@ -22,6 +22,7 @@ export default {
     line-height: 100%;
     text-transform: uppercase;
     border-radius: 24px;
+
     &:hover {
       cursor: pointer;
     }
