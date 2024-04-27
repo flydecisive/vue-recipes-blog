@@ -11,17 +11,22 @@
       </div>
       <accent-button>изучить рецепты</accent-button>
     </div>
+    <div class="main__sections">
+      <culinary-chronicle />
+    </div>
   </section>
 </template>
 
 <script>
 import { defineComponent } from "vue";
 import AccentButton from "@/ui/buttons/AccentButton.vue";
+import CulinaryChronicle from "@/components/sections/CulinaryChronicle.vue";
 
 export default defineComponent({
   name: "MainView",
   components: {
     AccentButton,
+    CulinaryChronicle,
   },
 });
 </script>
@@ -32,6 +37,7 @@ export default defineComponent({
 .main {
   display: flex;
   flex-flow: column nowrap;
+  margin-top: 16px;
 
   &__hero {
     background: linear-gradient(rgba(38, 37, 34, 0.6), rgba(38, 37, 34, 0.6)),
@@ -74,6 +80,14 @@ export default defineComponent({
       letter-spacing: 0.01em;
       color: $main-text-light;
     }
+  }
+
+  &__sections {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 64px;
+    width: 100%;
+    margin-top: 16px;
   }
 }
 </style>

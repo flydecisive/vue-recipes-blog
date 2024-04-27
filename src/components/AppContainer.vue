@@ -19,6 +19,5 @@ export default {
   flex-flow: column;
   padding: 16px 0px;
   box-sizing: border-box;
-  gap: 16px;
 }
 </style>
