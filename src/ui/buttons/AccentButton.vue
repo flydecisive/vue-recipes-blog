@@ -18,7 +18,7 @@ export default {
     border-radius: 24px;
     padding: 12px 24px;
     color: $dark;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 14px;
     line-height: 100%;
     box-sizing: border-box;

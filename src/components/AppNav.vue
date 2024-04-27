@@ -44,7 +44,6 @@ export default defineComponent({
       },
     };
   },
-
   watch: {
     $route() {
       this.path = this.$route.path;

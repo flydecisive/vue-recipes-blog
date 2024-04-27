@@ -4,11 +4,15 @@
     <AppNav />
     <div class="header__buttons">
       <search-button />
-      <primary-dark-button>{{
+      <primary-dark-button @click="handleHeaderButton()">{{
         $store.state.isAuth ? "Профиль" : "Войти"
       }}</primary-dark-button>
     </div>
   </header>
+
+  <modal-layout :isShow="isModalOpen" @close="closeModal"
+    ><auth-modal @close="closeModal"
+  /></modal-layout>
 </template>
 
 <script>
@@ -17,15 +21,35 @@ import AppNav from "./AppNav.vue";
 import AppLogo from "@/components/icons/AppLogo.vue";
 import PrimaryDarkButton from "@/ui/buttons/PrimaryDarkButton.vue";
 import SearchButton from "@/ui/buttons/SearchButton.vue";
+import ModalLayout from "@/components/modals/ModalLayout.vue";
+import AuthModal from "./modals/AuthModal.vue";
 
 export default defineComponent({
   name: "AppHeader",
+  data() {
+    return {
+      isModalOpen: false,
+    };
+  },
 
   components: {
     AppNav,
     AppLogo,
     PrimaryDarkButton,
     SearchButton,
+    ModalLayout,
+    AuthModal,
+  },
+
+  methods: {
+    handleHeaderButton() {
+      if (!this.$store.state.isAuth) {
+        this.isModalOpen = true;
+      }
+    },
+    closeModal(value) {
+      this.isModalOpen = value;
+    },
   },
 });
 </script>

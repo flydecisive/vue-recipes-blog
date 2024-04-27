@@ -16,7 +16,7 @@ export default defineComponent({
 <template>
   <app-container>
     <app-header></app-header>
-    <router-view></router-view>
+    <router-view> </router-view>
     <bottom-section></bottom-section>
   </app-container>
 </template>
